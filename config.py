@@ -14,6 +14,6 @@ def get_secret(key):
         return os.getenv(key)
 
 
-MONGODB_URI = get_secret("MONGODB_URL")
-GOOGLE_API_KEY = get_secret("GROQ_API_KEY")
+MONGODB_URL = get_secret("MONGODB_URL")
+GROQ_API_KEY = get_secret("GROQ_API_KEY")
 TAVILY_API_KEY = get_secret("TAVILY_API_KEY")

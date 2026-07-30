@@ -10,6 +10,10 @@ def store_in_mongodb(documents):
     collection=get_collection()
 
     if documents:
+        # Clear all previous records before inserting new ones
+        collection.delete_many({})
+        print("Cleared previous records from the database.")
+        
         results=collection.insert_many(
             documents
         )
