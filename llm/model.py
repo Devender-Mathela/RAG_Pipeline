@@ -1,9 +1,10 @@
 from langchain_groq import ChatGroq
 import os
 from dotenv import load_dotenv
+from config import GROQ_API_KEY
 load_dotenv()
 
-my_api_key=os.getenv("GROQ_API_KEY")
+my_api_key=GROQ_API_KEY
 
 def load_llm():
     """
