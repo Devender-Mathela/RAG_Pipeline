@@ -8,13 +8,15 @@ my_api_key=GROQ_API_KEY
 
 def load_llm():
     """
-    Load and return the ChatGroq LLM.
+    Load and return the ChatGroq LLM with automatic rate-limit retry handling.
     """
-    llm=ChatGroq(
-        model='llama-3.3-70b-versatile',
+    llm = ChatGroq(
+        model='qwen/qwen3.8-27b',
         api_key=my_api_key,
-        temperature=0
+        temperature=0,
+        max_retries=5
     )
 
     return llm
+
 
